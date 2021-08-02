@@ -3,8 +3,9 @@ def longestCommonPrefix(prev_prefix, new_word):
         return prev_prefix
     else:
         new_prefix = prev_prefix
-        while(prev_prefix not in new_word):
-            prev_prefix = prev_prefix[0: len(prev_prefix) - 1]
+        while(new_prefix not in new_word):
+            new_prefix = new_prefix[0: len(new_prefix) - 1]
+        return new_prefix
 
 strs = ["flower","flow","flight"]
 curr_common_prefix = strs[0]
